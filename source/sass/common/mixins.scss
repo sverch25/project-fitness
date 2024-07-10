@@ -1,0 +1,145 @@
+@mixin font-face($font-family, $font-weight, $font-style, $font-src) {
+  @font-face {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-style: $font-style;
+    src: $font-src;
+    font-display: swap;
+  }
+}
+
+@mixin font-text-s {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: $family-text;
+
+  @media (min-width: $tablet) {
+    line-height: 22px;
+  }
+}
+
+@mixin font-text-m {
+  font-weight: $weight-light;
+  font-size: 14px;
+  line-height: 22px;
+  font-family: $family-text;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@mixin font-text-l {
+  font-weight: $weight-light;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: $family-text;
+
+  @media (min-width: $tablet) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+@mixin heading-h1 {
+  font-weight: $weight-ebold;
+  font-size: 62px;
+  line-height: 62px;
+  font-family: $family-title;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  @media (min-width: $tablet) {
+    font-size: 72px;
+    line-height: 85px;
+    letter-spacing: 2px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 92px;
+    line-height: 110px;
+    letter-spacing: 4px;
+  }
+}
+
+@mixin heading-h2 {
+  font-weight: $weight-sbold;
+  font-size: 48px;
+  line-height: 54px;
+  font-family: $family-title;
+  text-transform: uppercase;
+
+  @media (min-width: $desktop) {
+    font-size: 82px;
+    line-height: 96px;
+  }
+}
+
+@mixin heading-h3 {
+  font-weight: $weight-sbold;
+  font-size: 32px;
+  line-height: 32px;
+  font-family: $family-title;
+
+  @media (min-width: $tablet) {
+    font-size: 42px;
+    line-height: 42px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 54px;
+    line-height: 54px;
+  }
+}
+
+@mixin heading-h4 {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 22px;
+  font-family: $family-text;
+
+  @media (min-width: $tablet) {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 26px;
+    line-height: 26px;
+  }
+}
+
+@mixin heading-h5 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  font-family: $family-text;
+
+  @media (min-width: $tablet) {
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+
+@mixin heading-h6 {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  font-family: $family-text;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 22px;
+    line-height: 22px;
+  }
+}

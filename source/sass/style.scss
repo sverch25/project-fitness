@@ -1,4 +1,18 @@
+// Common
+// ---------------------------------
+
+@import "common/variables";
+@import "common/mixins";
+@import "common/fonts";
+@import "common/global";
+@import "common/visually-hidden";
+
 // Vendor
 // ---------------------------------
 
 @import "vendor/normalize";
+
+// Blocks
+// ---------------------------------
+
+@import "blocks/page-container";
