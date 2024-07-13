@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="sass/style.scss">
-  <link rel="preload" href="../source/fonts/alumni-sans/AlumniSans-ExtraBold.woff2" as="font" />
-  <link rel="preload" href="../source/fonts/alumni-sans/AlumniSans-SemiBold.woff2" as="font" />
-  <link rel="preload" href="../source/fonts/roboto-condensed/RobotoCondensed-Regular.woff2" as="font" />
-  <link rel="preload" href="../source/fonts/roboto-condensed/RobotoCondensed-Bold.woff2" as="font" />
-  <link rel="preload" href="../source/fonts/roboto-condensed/RobotoCondensed-Light.woff2" as="font" />
+  <link rel="preload" href="../source/fonts/alumni-sans/AlumniSans-ExtraBold.woff2" as="font">
+  <link rel="preload" href="../source/fonts/alumni-sans/AlumniSans-SemiBold.woff2" as="font">
+  <link rel="preload" href="../source/fonts/roboto-condensed/RobotoCondensed-Regular.woff2" as="font">
+  <link rel="preload" href="../source/fonts/roboto-condensed/RobotoCondensed-Bold.woff2" as="font">
+  <link rel="preload" href="../source/fonts/roboto-condensed/RobotoCondensed-Light.woff2" as="font">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon.png">
   <title>SUPERGYM</title>
 </head>
@@ -23,24 +23,80 @@
   <!-- примеры требуемых атрибутов data-test="*" -->
   <div class="page-container">
     <section class="hero" data-test="hero">
-      
-      <h1 class="hero__title visually-hidden">Сайт Фитнес клуба</h1>
       <header class="hero__header header">
-        <a class="header__link" href="./index.html">
-          <span class="visually-hidden">Логотип SUPERGYM</span>
+        <a class="header__link" href="#">
+          <span class="header__title visually-hidden">Логотип SUPERGYM</span>
+          <picture>
+            <source type="image/svg+xml" media="(min-width: 1366px)" srcset="./img/icon/logo.svg" width="130"
+              height="26">
+            <source type="image/svg+xml" media="(min-width: 768px)" srcset="./img/icon/logo.svg" width="110"
+              height="22">
+            <img class="header__logo logo" src="./img/icon/logo.svg" width="100" height="20" alt="Лого SUPERGYM">
+          </picture>
+        </a>
+        <a class="header__phone" href="#">
+          <span class="header__phone-text">8 800 555-55-55</span>
         </a>
       </header>
+      <div class="hero__info">
+        <p class="hero__badge">Тренажёрный зал<br>Групповые занятия<br>Кардио-зона</p>
+        <div class="hero__container">
+          <span class="hero__text">Омск</span>
+          <h1 class="hero__title">Фитнес Центр</h1>
+        </div>
+      </div>
+      <button class="hero__btn button" type="button">купить абонемент</button>
     </section>
-    <div data-test="about">about</div>
-    <div data-test="price">price</div>
-    <div data-test="games">games</div>
-    <div data-test="juri">juri</div>
-    <div data-test="features">features</div>
-    <div data-test="offers">offers</div>
-    <div data-test="faq">faq</div>
-    <div data-test="reviews">reviews</div>
-    <div data-test="form">form</div>
-    <div data-test="footer">footer</div>
+    <section class="about" data-test="about">
+      <h2 class="about__title visually-hidden">Информация о фитнес центре</h2>
+      <div class="about__container">
+        <h3 class="about__title">Тренажёрный зал</h3>
+        <span class="about__badge">Просторный зал площадью 900 кв/м</span>
+        <p>Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела
+          и здоровья. Тренажёрный зал оснащён всем необходимым современным оборудованием для всех спортсменов.</p>
+      </div>
+      <picture>
+        <source type="image/svg+xml" media="(min-width: 1366px)"
+          srcset="./img/main-img-desktop@1x.webp 1x, ./img/main-img-desktop@2x.webp 2x" width="660" height="400">
+        <source type="image/svg+xml" media="(min-width: 768px)"
+          srcset="./img/main-img-tablet@1x.webp 1x, ./img/main-img-tablet@2x.webp 2x" width="678" height="345">
+        <source type="image/svg+xml" media="(min-width: 1366px)"
+          srcset="./img/main-img-desktop@1x.jpg 1x, ./img/main-img-desktop@2x.jpg 2x" width="660" height="400">
+        <source type="image/svg+xml" media="(min-width: 768px)"
+          srcset="./img/main-img-tablet@1x.jpg 1x, ./img/main-img-tablet@2x.jpg 2x" width="678" height="345">
+        <img class="about__image" src="./img/main-img.webp" srcset="./img/main-img@2x.webp 2x" width="320" height="280"
+          alt="картинка спортзала">
+      </picture>
+      <iframe class="about__video" src="https://www.youtube.com/embed/9TZXsZItgdw?si=TZ0KEWYYlFsPh4yK" width="320"
+        height="170" title="Youtube Video"></iframe>
+    </section>
+    <section class="price" data-test="price">
+      <h2 class="price__title visually-hidden">Абонементы</h2>
+    </section>
+    <section class="games" data-test="games">
+      <h2 class="games__title visually-hidden">Игры</h2>
+    </section>
+    <section class="juri" data-test="juri">
+      <h2 class="juri__title visually-hidden">Жюри</h2>
+    </section>
+    <section class="features" data-test="features">
+      <h2 class="features__title visually-hidden">Преимущества</h2>
+    </section>
+    <section class="offers" data-test="offers">
+      <h2 class="offers__title visually-hidden">Акции</h2>
+    </section>
+    <section class="faq" data-test="faq">
+      <h2 class="faq__title visually-hidden">FAQ</h2>
+    </section>
+    <section class="reviews" data-test="reviews">
+      <h2 class="reviews__title visually-hidden">Отзывы</h2>
+    </section>
+    <section class="form" data-test="form">
+      <h2 class="form__title visually-hidden">Форма записи</h2>
+    </section>
+    <section class="footer" data-test="footer">
+      <h2 class="footer__title visually-hidden">Подвал сайта</h2>
+    </section>
   </div>
   <script type="module" src="js/main.js"></script>
 </body>

@@ -8,6 +8,13 @@
   }
 }
 
+@mixin font($font-size, $line-height, $font-weight, $font-family: $family-text) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  font-family: $font-family;
+}
+
 @mixin font-text-s {
   font-weight: 400;
   font-size: 14px;

@@ -2,7 +2,14 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  text-decoration: none;
   margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 :root {

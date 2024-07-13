@@ -1,0 +1,13 @@
+.header {
+  padding: 16px 0 18px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+
+.header__phone-text {
+  @include font(22px,22px,700,$family-text);
+
+  color: var(--white);
+  display: block;
+}
