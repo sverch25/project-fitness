@@ -23,28 +23,33 @@
   <div class="page-container">
     <section class="hero" data-test="hero">
       <header class="hero__header header">
-        <a class="header__link" href="#">
-          <span class="header__title visually-hidden">Логотип SUPERGYM</span>
-          <picture>
-            <source type="image/svg+xml" media="(min-width: 1366px)" srcset="./img/icon/logo.svg" width="130"
-              height="26">
-            <source type="image/svg+xml" media="(min-width: 768px)" srcset="./img/icon/logo.svg" width="110"
-              height="22">
-            <img class="header__logo logo" src="./img/icon/logo.svg" width="100" height="20" alt="Лого SUPERGYM">
-          </picture>
-        </a>
-        <a class="header__phone" href="#">
-          <span class="header__phone-text">8 800 555-55-55</span>
-        </a>
+        <svg class="header__logo logo" width="100" height="20">
+          <use href="/__spritemap#sprite-logo"></use>
+        </svg>
+        <a class="header__phone" href="tel:88005555555">8 800 555-55-55</a>
       </header>
-      <div class="hero__info">
-        <p class="hero__badge">Тренажёрный зал<br>Групповые занятия<br>Кардио-зона</p>
-        <div class="hero__container">
-          <span class="hero__text">Омск</span>
-          <h1 class="hero__title">Фитнес Центр</h1>
+      <div class="hero__container">
+        <ul class="hero__list">
+          <li class="hero__item">Тренажёрный зал</li>
+          <li class="hero__item">Групповые занятия</li>
+          <li class="hero__item">Кардио-зона</li>
+        </ul>
+        <div class="hero__wrapper">
+          <p class="hero__text">Омск</p>
+          <h1 class="hero__title">ФИТНЕС ЦЕНТР</h1>
         </div>
+        <a class="hero__link button button--secondary" href="#price">Купить абонемент</a>
       </div>
-      <button class="hero__btn button" type="button">купить абонемент</button>
+      <picture>
+        <source type="image/webp" media="(min-width: 1366px)"
+          srcset="./img/hero-img-desktop.webp 1x, img/hero-img-desktop@2x.webp 2x" width="500" height="524">
+        <source type="image/webp" media="(min-width: 768px)"
+          srcset="./img/hero-img-tablet.webp 1x, img/hero-img-tablet@2x.webp 2x" width="324" height="390">
+        <source type="image/jpg" media="(min-width: 1366px)"
+          srcset="./img/hero-img-desktop.jpg 1x, img/hero-img-desktop@2x.jpg 2x" width="500" height="524">
+        <img class="hero__image" src="./img/hero-img-tablet.jpg" srcset="./img/hero-img-tablet@2x.jpg 2x" width="324"
+          height="390" alt="Тренер.">
+      </picture>
     </section>
     <section class="about" data-test="about">
       <h2 class="visually-hidden">О нас</h2>
@@ -554,11 +559,97 @@
       </div>
     </section>
     <section class="form" data-test="form">
-      <h2 class="form__title visually-hidden">Форма записи</h2>
+      <h2 class="visually-hidden">Заявка на бесплатное занятие</h2>
+      <form class="form__sending" action="https://echo.htmlacademy.ru/" method="post">
+        <fieldset class="form__contacts">
+          <legend class="form__title">Бесплатное занятие</legend>
+          <ul class="form__list">
+            <li class="form__item">
+              <label class="form__label">
+                <input class="form__text" type="text" name="name" placeholder="Имя" required>
+              </label>
+            </li>
+            <li class="form__item">
+              <label class="form__label">
+                <input class="form__text" type="tel" name="phone" placeholder="Телефон" required>
+              </label>
+            </li>
+          </ul>
+          <button class="form__button button button--secondary" type="submit">Отправить</button>
+        </fieldset>
+      </form>
+      <div class="contacts">
+        <h3 class="contacts__title">Контакты</h3>
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <h4 class="contacts__subtitle">Адрес:</h4>
+            <address class="contacts__address contacts__text">г. Омск, ул. 60 лет Октября, 7</address>
+          </li>
+          <li class="contacts__item">
+            <h4 class="contacts__subtitle">График работы:</h4>
+            <p class="contacts__description contacts__text">Пн-Вс: с 8:00 до 22:00</p>
+          </li>
+          <li class="contacts__item">
+            <h4 class="contacts__subtitle">Телефон:</h4>
+            <a class="contacts__phone contacts__text" href="tel:88005555555">8 800 555-55-55</a>
+          </li>
+          <li class="contacts__item">
+            <h4 class="contacts__subtitle">Email:</h4>
+            <a class="contacts__link contacts__text" href="mailto:oмск@supergym.ru">oмск@supergym.ru</a>
+          </li>
+        </ul>
+      </div>
     </section>
-    <section class="footer" data-test="footer">
-      <h2 class="footer__title visually-hidden">Подвал сайта</h2>
-    </section>
+    <footer class="footer" data-test="footer">
+      <svg class="footer__logo logo" width="100" height="20">
+        <use href="/__spritemap#sprite-logo"></use>
+      </svg>
+      <nav class="footer__nav">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a class="footer__link" href="#">Услуги</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#price">Абонементы</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#offers">Акции</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Тренеры</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Расписание</a>
+          </li>
+        </ul>
+      </nav>
+      <ul class="footer__social-list social-list">
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--vkontakte" href="#">
+            <span class="visually-hidden">Мы в ВКонтакте</span>
+            <svg class="social-list__icon" width="15" height="15" aria-hidden="true">
+              <use href="/__spritemap#sprite-vk"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--ok" href="#">
+            <span class="visually-hidden">Мы в Одноклассниках</span>
+            <svg class="social-list__icon" width="15" height="15" aria-hidden="true">
+              <use href="/__spritemap#sprite-ok"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--reddit" href="#">
+            <span class="visually-hidden">Мы в Reddit</span>
+            <svg class="social-list__icon" width="15" height="15" aria-hidden="true">
+              <use href="/__spritemap#sprite-reddit"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </footer>
   </div>
   <script type="module" src="js/main.js"></script>
 </body>

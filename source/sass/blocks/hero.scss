@@ -1,50 +1,115 @@
 .hero {
   background: linear-gradient(90deg, #1c3477 0%, #1c3477 0.01%, #1a3578 39.11%, #73184b 75.5%, #b4022a 100%);
-  padding-right: 15px;
-  padding-left: 15px;
-  padding-bottom: 32px;
+  color: $base-white;
+  padding: 15px 15px 32px;
+  display: grid;
+  grid-template-columns: 290px;
+  justify-content: center;
+
+  @media (min-width: $tablet) {
+    padding: 29px 45px 100px;
+    grid-template-columns: 324px 324px;
+    grid-template-rows: min-content 1fr;
+    column-gap: 30px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 30px 103px 120px;
+    grid-template-columns: 588px 572px;
+    gap: 0;
+  }
 }
 
 .hero__container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  row-gap: 47px;
+
+  @media (min-width: $tablet) {
+    grid-template-columns: 139px 187px;
+    row-gap: 45px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 262px 270px;
+    margin-right: 56px;
+    justify-content: flex-end;
+    row-gap: 40px;
+  }
 }
 
-.hero__info {
-  display: flex;
-  margin-bottom: 48px;
-  justify-content: space-between;
+.hero__list {
+  margin-right: 21px;
+  font-family: $secondary-font;
+  text-align: right;
+  list-style-type: none;
+  padding: 0;
+
+  @media (min-width: $tablet) {
+    line-height: 22px;
+    margin-right: 26px;
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-right: 0;
+    margin-bottom: 71px;
+  }
+}
+
+.hero__wrapper {
+  text-align: right;
 }
 
 .hero__text {
+  margin: 0;
+  margin-bottom: 14px;
+
   @include heading-h3;
 
-  color: var(--white);
+  @media (min-width: $tablet) {
+    margin-bottom: 10px;
+    margin-right: 2px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 41px;
+    margin-right: 0;
+  }
 }
 
 .hero__title {
   margin: 0;
-  text-align: end;
-  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 
   @include heading-h1;
 }
 
-.hero__badge {
-  align-self: flex-end;
-  color: var(--white);
-  flex-shrink: 0;
+.hero__image {
+  display: none;
 
-  @include font-text-s;
+  @media (min-width: $tablet) {
+    display: block;
+  }
 }
 
-.hero__btn {
-  color: var(--white);
-  width: 290px;
-  height: 60px;
-  background-color: transparent;
+.hero__link {
+  text-decoration: none;
+  color: $base-white;
+  grid-column: 1/3;
 
-  @include font(12px,12px,700,$secondary-font);
+  @media (min-width: $tablet) {
+    padding: 20px;
+    margin-top: 5px;
+    margin-right: 2px;
+    grid-column: 2/3;
+    align-self: self-start;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 25px;
+    padding-bottom: 24px;
+  }
 }

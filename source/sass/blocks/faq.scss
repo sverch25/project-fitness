@@ -10,6 +10,9 @@
   @media (min-width: $desktop) {
     padding: 100px 103px;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -24,6 +27,7 @@
 
   @media (min-width: $desktop) {
     margin-bottom: 50px;
+    align-self: flex-start;
   }
 }
 
@@ -31,6 +35,7 @@
   @media (min-width: $desktop) {
     display: grid;
     grid-template-columns: 260px 860px;
+    gap: 40px;
   }
 }
 
@@ -43,6 +48,13 @@
 
   @media (min-width: $tablet) {
     margin-bottom: 45px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 0;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
   }
 }
 
@@ -67,6 +79,14 @@
     padding-bottom: 16px;
     font-size: 18px;
     line-height: 18px;
+  }
+
+  @media (min-width: $desktop) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 260px;
+    height: 54px;
   }
 }
 
@@ -99,6 +119,7 @@
 
   @media (min-width: $tablet) {
     padding-top: 24px;
+    padding-bottom: 23px;
   }
 }
 
@@ -119,12 +140,21 @@
     line-height: 22px;
     padding-top: 9px;
     padding-bottom: 9px;
-    margin-bottom: 9px;
+    margin-bottom: 0;
   }
 }
 
 .faq__subitem:nth-child(1) h4 {
   padding-right: 22px;
+
+  @media (min-width: $tablet) {
+    padding-right: 0;
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 20px;
+  }
 }
 
 .faq__subitem p {
@@ -138,7 +168,7 @@
     width: 560px;
     font-size: 18px;
     line-height: 24px;
-    margin-bottom: 23px;
+    margin-bottom: 0;
   }
 }
 
