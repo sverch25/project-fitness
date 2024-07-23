@@ -6,7 +6,7 @@
 }
 
 .header__phone-text {
-  @include font(22px,22px,700,$family-text);
+  @include font(22px,22px,700,$secondary-font);
 
   color: var(--white);
   display: block;

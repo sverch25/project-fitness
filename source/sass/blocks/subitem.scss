@@ -1,0 +1,145 @@
+.subitem__title {
+  font-family: $secondary-font;
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 18px;
+
+  @media (min-width: $tablet) {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 26px;
+    line-height: 26px;
+    margin-bottom: 17px;
+  }
+}
+
+.subitem__text {
+  font-family: $secondary-font;
+  font-weight: 300;
+  line-height: 22px;
+  margin-bottom: 64px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 82px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 77px;
+  }
+}
+
+.subitem__cost {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 19px;
+  font-family: $secondary-font;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 72px;
+  color: $base-secondary;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 22px;
+    font-size: 60px;
+    line-height: 90px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 17px;
+  }
+}
+
+.subitem::before {
+  position: absolute;
+  font-family: $secondary-font;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 120px;
+  text-align: center;
+  color: rgba(232, 232, 232, 1);
+  top: 49%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @media (min-width: $tablet) {
+    font-size: 100px;
+    line-height: 150px;
+    top: 50%;
+  }
+}
+
+.subitem--1::before {
+  content: "5000";
+}
+
+.subitem--2::before {
+  content: "1700";
+}
+
+.subitem--3::before {
+  content: "2700";
+}
+
+.subitem--4::before {
+  content: "30000";
+}
+
+.subitem--5::before {
+  content: "10200";
+}
+
+.subitem--6::before {
+  content: "16200";
+}
+
+.subitem--7::before {
+  content: "60000";
+}
+
+.subitem--8::before {
+  content: "20400";
+}
+
+.subitem--9::before {
+  content: "32400";
+}
+
+.subitem__cost::after {
+  display: block;
+  content: "";
+  width: 24px;
+  height: 33px;
+  background-image: url("../../img/sprite/rub.svg");
+  background-size: 24px 33px;
+  background-repeat: no-repeat;
+  margin-left: 10px;
+
+  @media (min-width: $tablet) {
+    width: 30px;
+    height: 42px;
+    background-size: 30px 42px;
+    margin-left: 14px;
+  }
+}
+
+.subitem:nth-child(2) .subitem__cost {
+  @media (min-width: $desktop) {
+    margin-bottom: 18px;
+  }
+}
+
+.subitem__link {
+  text-decoration: none;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}

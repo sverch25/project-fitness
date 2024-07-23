@@ -42,7 +42,9 @@
 
 .hero__btn {
   color: var(--white);
-  text-transform: uppercase;
+  width: 290px;
+  height: 60px;
+  background-color: transparent;
 
-  @include font(12px,12px,700,$family-text);
+  @include font(12px,12px,700,$secondary-font);
 }

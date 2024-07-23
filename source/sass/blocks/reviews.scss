@@ -1,0 +1,139 @@
+.reviews {
+  padding: 40px;
+  padding-top: 41px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet) {
+    padding: 60px 45px;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 100px 103px;
+  }
+}
+
+.reviews__title {
+  margin-bottom: 39px;
+
+  @media (min-width: $tablet) {
+    font-size: 54px;
+    line-height: 54px;
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 75px;
+  }
+}
+
+.reviews__list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.reviews__wrapper {
+  position: relative;
+}
+
+.reviews__button {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: block;
+    position: absolute;
+    top: 44%;
+    border: none;
+    background-color: transparent;
+    width: 16px;
+    height: 32px;
+    background-image: url("../../img/sprite/arrow.svg");
+    background-repeat: no-repeat;
+    background-size: 16px 32px;
+  }
+}
+
+.reviews__button--prev {
+  @media (min-width: $tablet) {
+    left: -89px;
+    transform: rotate(180deg);
+    opacity: 0.3;
+  }
+
+  @media (min-width: $desktop) {
+    left: -105px;
+  }
+}
+
+.reviews__button--next {
+  @media (min-width: $tablet) {
+    right: -89px;
+  }
+
+  @media (min-width: $desktop) {
+    right: -105px;
+  }
+}
+
+.reviews__item {
+  padding: 30px 25px 29px;
+  background-color: $background-additional;
+  color: $base-white;
+  width: 240px;
+  box-shadow: 0 0 40px 0 rgba(28, 51, 116, 0.2);
+
+  @media (min-width: $tablet) {
+    padding: 40px 30px;
+    width: 500px;
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    column-gap: 40px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 560px;
+    padding: 61px 60px 59px;
+    column-gap: 30px;
+  }
+}
+
+.reviews__item img {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  margin-bottom: 4px;
+
+  @media (min-width: $tablet) {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.reviews__item h4 {
+  margin: 0;
+  margin-bottom: 17px;
+  font-family: $secondary-font;
+  font-size: 18px;
+  font-weight: 400;
+
+  @media (min-width: $tablet) {
+    font-size: 22px;
+    line-height: 22px;
+    margin-bottom: 20px;
+  }
+}
+
+.reviews__item p {
+  margin: 0;
+  font-family: $secondary-font;
+  line-height: 22px;
+  font-weight: 300;
+
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
