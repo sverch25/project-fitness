@@ -145,11 +145,6 @@
 
   @media (min-width: $tablet) {
     padding-right: 0;
-    margin-bottom: 10px;
-  }
-
-  @media (min-width: $desktop) {
-    margin-bottom: 20px;
   }
 }
 
@@ -184,6 +179,9 @@
   color: $base-primary;
   background-color: $base-white;
   cursor: pointer;
+  background-image: url("../../img/sprite/plus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 
   @media (min-width: $tablet) {
     top: 49%;
@@ -221,4 +219,10 @@
 
 .faq__button:disabled {
   opacity: 0.3;
+}
+
+.faq__panel {
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  max-height: 0;
 }
