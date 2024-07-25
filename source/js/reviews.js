@@ -32,25 +32,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   buttonSwiperPrevious.addEventListener('click', () => {
     if (swiperReviews.isBeginning) {
-      // Если текущий слайд - последний, блокируем кнопку
-      document.querySelector('.swiper-buttons-reviews .swiper-button-prev').style.opacity = '0.3';
+      document.querySelector('.swiper-buttons-reviews .swiper-button-prev').disabled = true;
     } else {
-      // Иначе разблокируем кнопку
       swiperReviews.slidePrev(500, false);
-      document.querySelector('.swiper-buttons-reviews .swiper-button-prev').style.opacity = '1';
-      document.querySelector('.swiper-buttons-reviews .swiper-button-next').style.opacity = '1';
+      document.querySelector('.swiper-buttons-reviews .swiper-button-prev').disabled = false;
+      document.querySelector('.swiper-buttons-reviews .swiper-button-next').disabled = false;
     }
   });
 
   buttonSwiperNext.addEventListener('click', () => {
     if (swiperReviews.isEnd) {
-      // Если текущий слайд - последний, блокируем кнопку
-      document.querySelector('.swiper-buttons-reviews .swiper-button-next').style.opacity = '0.3';
+      document.querySelector('.swiper-buttons-reviews .swiper-button-next').disabled = true;
     } else {
-      // Иначе разблокируем кнопку
       swiperReviews.slideNext(500, false);
-      document.querySelector('.swiper-buttons-reviews .swiper-button-next').style.opacity = '1';
-      document.querySelector('.swiper-buttons-reviews .swiper-button-prev').style.opacity = '1';
+      document.querySelector('.swiper-buttons-reviews .swiper-button-next').disabled = false;
+      document.querySelector('.swiper-buttons-reviews .swiper-button-prev').disabled = false;
     }
   });
 });
