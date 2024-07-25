@@ -79,7 +79,7 @@
 
   @media (min-width: $desktop) {
     padding: 60px 80px 98px;
-    row-gap: 30px;
+    row-gap: 28px;
   }
 }
 
@@ -145,6 +145,10 @@
 .games__description:nth-child(2) {
   @media (min-width: $tablet) {
     margin-bottom: 10px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 19px;
   }
 }
 

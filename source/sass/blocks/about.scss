@@ -162,7 +162,7 @@
   border: 2px solid rgba(237, 2, 51, 0.2);
 
   @media (min-width: $desktop) {
-    top: 48%;
+    top: 50%;
     width: 100px;
     height: 100px;
   }
@@ -196,8 +196,7 @@
   width: 12px;
   height: 12px;
   background-color: $base-white;
-  background-image: url("../__spritemap#sprite-play-view");
-  background-repeat: no-repeat;
+  mask-image: url("../__spritemap#sprite-play-view");
   z-index: 1;
 
   @media (min-width: $desktop) {

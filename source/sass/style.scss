@@ -11,11 +11,13 @@
 // ---------------------------------
 
 @import "vendor/normalize";
+@import "vendor/swiper";
 
 // Blocks
 // ---------------------------------
 
 @import "blocks/page-container";
+@import "blocks/list";
 @import "blocks/hero";
 @import "blocks/header";
 @import "blocks/logo";
