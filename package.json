@@ -50,6 +50,7 @@
     "w3c-html-validator": "1.6.4"
   },
   "dependencies": {
+    "surge": "^0.23.1",
     "swiper": "^11.0.7"
   },
   "engines": {
