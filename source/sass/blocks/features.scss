@@ -113,13 +113,14 @@
     font-size: 22px;
     line-height: 22px;
     margin-top: 1px;
-    margin-bottom: 8px;
+    margin-bottom: 7px;
   }
 }
 
 .features__item p {
   padding: 0 43px;
   line-height: 21px;
+  font-weight: 300;
 
   @media (min-width: $tablet) {
     padding: 0;

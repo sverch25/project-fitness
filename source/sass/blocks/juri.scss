@@ -17,6 +17,10 @@
 
 .juri__title {
   margin-bottom: 18px;
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 600;
+  font-family: $primary-font;
 
   @media (min-width: $tablet) {
     font-size: 54px;
